@@ -23,7 +23,7 @@ const Book = ()=> {
 }
 
 const Image =()=><img src='https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY466_.jpg' alt='Interesting Facts For Curious Minds'/>
-const Title =()=><h3>Title of the book</h3>
+const Title =()=><h3>Interesting Facts For Curious Minds</h3>
 const Author =()=>{
 return <h4>Jordan Moore</h4>}
 
