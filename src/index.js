@@ -2,17 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
+import './index.css'
 const BookList = ()=> {
-  return  <section>
+  return  <section className='booklist'>
    <Book/>
    <Book/>
    <Book/>
+   <Book/>
+   
   </section>
   
 }
 const Book = ()=> {
-  return  <article>
+  return  <article  className='book'>
      <Image/>
 <Title/>
 <Author/>
