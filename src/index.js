@@ -18,7 +18,7 @@ const Book = ()=> {
   
 }
 
-const Image =()=><h2>Image Placeholder</h2>
+const Image =()=><img src='https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY466_.jpg' alt='Interesting Facts For Curious Minds'/>
 const Title =()=><h3>Book Title</h3>
 const Author =()=>{
 return <h4>Author</h4>}
