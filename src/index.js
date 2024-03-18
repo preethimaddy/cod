@@ -3,29 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import './index.css'
+
+const img='https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY466_.jpg';
+const title='Intresting Facts for curious Minds';
+const author='Jordhan Moore';
+
 const BookList = ()=> {
   return  <section className='booklist'>
-   <Book/>
-   <Book/>
-   <Book/>
-   <Book/>
-   
+   <Book author={author} title={title} img={img}/>
+   <Book  author={author} title={title} img={img}/>
+
   </section>
-  
 }
-const Book = ()=> {
+const Book = (props)=> {
+  console.log(props);
   return  <article  className='book'>
-     <Image/>
-<Title/>
-<Author/>
+     <img src={props.img} alt={props.title}/>
+     <h2>{props.title}</h2>
+     <h4>{props.author}</h4>
+  
   </article>
   
 }
 
-const Image =()=><img src='https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY466_.jpg' alt='Interesting Facts For Curious Minds'/>
-const Title =()=><h3>Interesting Facts For Curious Minds</h3>
-const Author =()=>{
-return <h4>Jordan Moore</h4>}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<BookList/>);
