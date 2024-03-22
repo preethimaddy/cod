@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import './index.css'
+
 
 const books =[
   {
@@ -22,19 +22,21 @@ const books =[
     author:'Morgan Housel'
   }];
 
-  const names = ['john', 'peter' ,'susan'];
-const newNames = names.map((name)=>{
+//   const names = ['john', 'peter' ,'susan'];
+// const newNames = names.map((name)=>{
 
-  return<h1>{name}</h1>
-})
-console.log(newNames);
+//   return<h1>{name}</h1>
+// })
+// console.log(newNames);
 const BookList =() => {
   return (
      <section className='booklist'>
-    {names.map((name)=>{
+ {books.map((book)=>{
+ const {img, title, author} = book;
 
-    return<h1>{name}</h1>;
-  })};
+return <Book img={img} title={title} author={author} />
+  
+ })}
     </section>
 
   );
