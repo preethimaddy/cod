@@ -49,8 +49,13 @@ const EventExamples =()=>{
   const handleButtonClick = ()=>{
     alert('handle button click')
   }
+ const handleFormSubmission = (e)=>{
+  e.preventDefault()
+    alert('form submitted')
+  
+  }
   return <section>
-    <form>
+    <form onSubmit={handleFormSubmission}>
     <h2>Typical form</h2>
     <input type='text' name='example' onChange={handleFormInput} style={{margin:'1rem 0'}}/>
     </form>
