@@ -34,11 +34,8 @@ const books =[
 const BookList =() => {
   return (
      <section className='booklist'>
- {books.map((book,index)=>{
- const {img, title, author, id} = book;
-
-return <Book img={img} title={title} author={author} key={index}/>
-  
+ {books.map((book)=>{
+return <Book {...book} key={book.id}/>
  })}
     </section>
 
@@ -56,9 +53,23 @@ return <Book img={img} title={title} author={author} key={index}/>
     );
   }
 
+const friends = ['john', 'regina', 'michael']
+const newFriends= [...friends,'Preethi']
+  console.log(friends);
+  console.log(newFriends);
 
-  
+  const someobj={
+    name:'preethi',
+    class: '1st year',
+    job:'developer'
+  }
 
+  //copy not a reference
+  const newobj={
+    ...someobj, location:'florida'
+  }
+console.log(someobj);
+console.log(newobj);
   
  
 
