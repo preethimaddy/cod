@@ -1,4 +1,4 @@
-import React from 'react';
+import {React} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -34,12 +34,28 @@ const books =[
 const BookList =() => {
   return (
      <section className='booklist'>
+      <EventExamples />
  {books.map((book)=>{
 return <Book {...book} key={book.id}/>
  })}
     </section>
 
   );
+}
+const EventExamples =()=>{
+  const handleFormInput = () => {
+    console.log('handle form input')
+  }
+  const handleButtonClick = ()=>{
+    alert('handle button click')
+  }
+  return <section>
+    <form>
+    <h2>Typical form</h2>
+    <input type='text' name='example' onChange={handleFormInput} style={{margin:'1rem 0'}}/>
+    </form>
+    <button onClick={handleButtonClick}>clickme</button>
+  </section>;
 }
   const Book =(props)=> {
     const {img, title, author} = props;
