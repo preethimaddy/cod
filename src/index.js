@@ -31,46 +31,52 @@ const books =[
 //   return<h1>{name}</h1>
 // })
 // console.log(newNames);
-const BookList =() => {
+
+function BookList () {
+  const someValue = 'MeatandEat'
+  const displayValue = () =>{
+    console.log(someValue);
+  }
   return (
      <section className='booklist'>
-      <EventExamples />
+      {/* <EventExamples /> */}
  {books.map((book)=>{
-return <Book {...book} key={book.id}/>
+return <Book {...book} key={book.id} displayValue={displayValue} />
  })}
     </section>
 
   );
 }
-const EventExamples =()=>{
-  const handleFormInput = () => {
-    console.log('handle with care')
-  }
-  const handleButtonClick = ()=>{
-    alert('handle button click')
-  }
- const handleFormSubmission = (e)=>{
-  e.preventDefault()
-    console.log('form submitted')
+// const EventExamples =()=>{
+//   const handleFormInput = () => {
+//     console.log('handle with care')
+//   }
+//   const handleButtonClick = ()=>{
+//     alert('handle button click')
+//   }
+//  const handleFormSubmission = (e)=>{
+//   e.preventDefault()
+//     console.log('form submitted')
   
-  }
-  return <section>
-    <form>
-    <h2>Typical form</h2>
-    <input type='text' name='example' onChange={(e)=>console.log(e.target.value)} style={{margin:'1rem 0'}}/>
-    <button type='submit'  onClick={handleFormSubmission}>Submit</button>
-    </form>
-    <button onClick={()=> console.log('clickclick')} type='button'>clickme</button>
+//   }
+//   return <section>
+//     <form>
+//     <h2>Typical form</h2>
+//     <input type='text' name='example' onChange={(e)=>console.log(e.target.value)} style={{margin:'1rem 0'}}/>
+//     <button type='submit'  onClick={handleFormSubmission}>Submit</button>
+//     </form>
+//     <button onClick={()=> console.log('clickclick')} type='button'>clickme</button>
    
-  </section>;
-}
+//   </section>;
+// }
   const Book =(props)=> {
-    const {img, title, author} = props;
+    const {img, title, author,displayValue} = props;
     console.log(props);
     return (
       <article  className='book'>
     <img src={img} alt={title}/>
     <h2>{title}</h2>
+    <button onClick={displayValue}>clickkaro</button>
     <h4>{author}</h4>
  </article>
     );
