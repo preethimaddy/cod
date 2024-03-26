@@ -44,7 +44,7 @@ return <Book {...book} key={book.id}/>
 }
 const EventExamples =()=>{
   const handleFormInput = () => {
-    console.log('handle form input')
+    console.log('handle with care')
   }
   const handleButtonClick = ()=>{
     alert('handle button click')
@@ -57,10 +57,10 @@ const EventExamples =()=>{
   return <section>
     <form>
     <h2>Typical form</h2>
-    <input type='text' name='example' onChange={handleFormInput} style={{margin:'1rem 0'}}/>
+    <input type='text' name='example' onChange={(e)=>console.log(e.target.value)} style={{margin:'1rem 0'}}/>
     <button type='submit'  onClick={handleFormSubmission}>Submit</button>
     </form>
-    <button onClick={handleButtonClick} type='button'>clickme</button>
+    <button onClick={()=> console.log('clickclick')} type='button'>clickme</button>
    
   </section>;
 }
