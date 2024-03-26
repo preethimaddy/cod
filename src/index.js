@@ -32,19 +32,18 @@ const books =[
 // })
 // console.log(newNames);
 
-function BookList () {
-  const someValue = 'MeatandEat'
-  const displayValue = () =>{
-    console.log(someValue);
-  }
+const BookList = () =>{
+  
   return (
+    <>
+    <h1>Amazon bestsellers</h1>
      <section className='booklist'>
       {/* <EventExamples /> */}
  {books.map((book, index)=>{
-return <Book {...book} key={book.id} displayValue={displayValue} number={index} />
+return <Book {...book} key={book.id} number={index} />
  })}
     </section>
-
+    </>
   );
 }
 // const EventExamples =()=>{
