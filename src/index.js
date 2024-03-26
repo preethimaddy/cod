@@ -2,7 +2,7 @@ import {React} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
+import Book from './Book';
 
 const books =[
   {
@@ -40,8 +40,8 @@ function BookList () {
   return (
      <section className='booklist'>
       {/* <EventExamples /> */}
- {books.map((book)=>{
-return <Book {...book} key={book.id} displayValue={displayValue} />
+ {books.map((book, index)=>{
+return <Book {...book} key={book.id} displayValue={displayValue} number={index} />
  })}
     </section>
 
@@ -69,18 +69,7 @@ return <Book {...book} key={book.id} displayValue={displayValue} />
    
 //   </section>;
 // }
-  const Book =(props)=> {
-    const {img, title, author,displayValue} = props;
-    console.log(props);
-    return (
-      <article  className='book'>
-    <img src={img} alt={title}/>
-    <h2>{title}</h2>
-    <button onClick={displayValue}>clickkaro</button>
-    <h4>{author}</h4>
- </article>
-    );
-  }
+  
 
 const friends = ['john', 'regina', 'michael']
 const newFriends= [...friends,'Preethi']
