@@ -5,8 +5,8 @@ const Codebasic = () => {
 
     const sayHello =() => {
 console.log('Hello There!!');
-
-
+// Be careful you will have Infinite loop************************************************************8
+setvalue(value+1)
     };
     sayHello();
   return (
