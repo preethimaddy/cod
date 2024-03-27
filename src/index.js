@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Book from './Book';
-
+import App from './App'
 const books =[
   {
     img:'https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY466_.jpg',
@@ -46,6 +46,7 @@ return <Book {...book} key={book.id} number={index} />
     </>
   );
 }
+
 // const EventExamples =()=>{
 //   const handleFormInput = () => {
 //     console.log('handle with care')
@@ -68,6 +69,7 @@ return <Book {...book} key={book.id} number={index} />
    
 //   </section>;
 // }
+
   
 
 const friends = ['john', 'regina', 'michael']
@@ -87,12 +89,12 @@ const newFriends= [...friends,'Preethi']
   }
 console.log(someobj);
 console.log(newobj);
-  
- 
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<BookList/>);
+root.render(<App/>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
