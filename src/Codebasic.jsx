@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from 'react'
 const Codebasic = () => {
     const [value, setvalue]= useState(0);
@@ -6,9 +6,12 @@ const Codebasic = () => {
     const sayHello =() => {
 console.log('Hello There!!');
 // Be careful you will have Infinite loop************************************************************8
-setvalue(value+1)
+//If we updating state value inside the function_________ 
     };
     sayHello();
+    useEffect ( ()=>{
+        console.log('hello from useffect');
+    },[]);
   return (
     <div>
         <h1> value: {value}</h1>
