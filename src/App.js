@@ -2,6 +2,7 @@
 import './App.css';
 import Codebasic from './Codebasic';
 import Errorcount from './Errorcount';
+import FetchData from './FetchData';
 import UseStatebasic from './UseStatebasic';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Errorcount />
       <UseStatebasic />
  <Codebasic />
+ <FetchData />
     </div>
   );
 }
