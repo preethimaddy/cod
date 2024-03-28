@@ -1,12 +1,12 @@
 
 import './App.css';
-import Multireturns from './Multireturns';
+import MultipleReturnFetch from './MultipleReturnFetch';
 
 
 function App() {
   return (
     <div className="App">
-      <Multireturns />
+   <MultipleReturnFetch />
     </div>
   );
 }
