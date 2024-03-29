@@ -7,11 +7,16 @@ const MultipleReturnFetch = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
-    useEffect(()=>{
+
         const fetchUser = async ()=>{
 try{
     const resp = await fetch(url)
+    if(!resp.ok){
+    setIsError(true);
+setIsLoading(false)
+return;}
     const user = await resp.json();
+    console.log(resp)
     setUser(user);
   
 }
@@ -21,19 +26,23 @@ catch(error){
 }
 setIsLoading(false)
 };
-  fetchUser()     
-    },[]);
+useEffect(()=>{
+    fetchUser();     
+},[]);
+
+
     if(isLoading){
         return<h2>Loading..</h2>
     }
     if(isError){
         return<h2>There was an Error!!!</h2>
     }
+    const {avatar_url, name, company, bio}=user;
  return <div>
-    <img style={{width:'150px', borderRadius: '25px'} }src={user.avatar_url} alt={user.name}/>
-    <h2>user.name</h2>
-    <h4>works at {user.company}</h4>
-    <p>{user.bio}</p>
+    <img style={{width:'150px', borderRadius: '25px'} }src={avatar_url} alt={name}/>
+    <h2>name</h2>
+    <h4>works at {company}</h4>
+    <p>{bio}</p>
  </div>
 }
 
