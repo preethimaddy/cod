@@ -1,13 +1,11 @@
 
 import './App.css';
-import MultipleReturnFetch from './MultipleReturnFetch';
-import Shortcircuitoverview from './Shortcircuitoverview';
+import Toggle from './Toggle';
 
 function App() {
   return (
     <div className="App">
-   <MultipleReturnFetch />
-   <Shortcircuitoverview />
+  <Toggle />
     </div>
   );
 }
