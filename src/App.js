@@ -1,15 +1,11 @@
 
 import './App.css';
-import CleanuupFunction from './CleanuupFunction';
-import Toggle from './Toggle';
-import UserChallenge from './UserChallenge';
+import ControlledInputs from './ControlledInputs'
 
 function App() {
   return (
     <div className="App">
-  <Toggle />
-  <UserChallenge />
-  <CleanuupFunction />
+<ControlledInputs />
     </div>
   );
 }
