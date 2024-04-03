@@ -16,6 +16,10 @@ const ControlledInputs = () => {
     setName('') 
     console.log('Form Submitted');
    }
+   const removeUser = (id) => {
+    const updatedUsers =users.filter((person)=>person.id !==id)    
+    setUsers(updatedUsers) ;
+   }
   return (
   <div>
     <form className='form' onSubmit={handleSubmit}>
@@ -31,6 +35,7 @@ const ControlledInputs = () => {
    {users.map((user)=>{
 return <div key={user.index}>
   <h4>{user.name}</h4>
+  <button  onClick={()=> removeUser(user.id)}className='btn'>Remove</button>
 </div>
    })}
     </div>
