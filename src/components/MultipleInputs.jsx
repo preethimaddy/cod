@@ -9,8 +9,8 @@ const MultipleInputs = () => {
     const handleChange = (e)=>{
 console.log(e.target.value);
 setUser({...user, [e.target.name]:e.target.value});
-    }
-   const handleSubmit = (e) =>{
+    };
+   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(user);
    } 
@@ -20,7 +20,7 @@ setUser({...user, [e.target.name]:e.target.value});
               <h4>Multiple Inputs</h4>
 
               <div className='form-row'>
-                  <label htmlFor='name' className='form-label'>name</label>
+                  <label htmlFor='name' className='form-label'>Name</label>
                   <input type='text' id='name' value={user.name} onChange={handleChange} name='name'className='form-input' />
               </div>
               <div className='form-row'>
