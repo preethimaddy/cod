@@ -1,11 +1,10 @@
-
 import './App.css';
-import ControlledInputs from './ControlledInputs'
+import MultipleInputs from './components/MultipleInputs';
 
 function App() {
   return (
     <div className="App">
-<ControlledInputs />
+<MultipleInputs />
     </div>
   );
 }

@@ -47,7 +47,7 @@
 .form{
   width: 90vw;
   max-width: var(--fixed-width);
-  background: var(--grey);
+  background: White;
 border-radius: var(--borderRadius);
 box-shadow: var(--shadow-2);
 padding: 2rem 2.5rem;
@@ -65,4 +65,5 @@ margin:3rem auto;
 width: 50%;
 padding : 0.375rem 0.75rem;
 border-radius: var(--borderRadius);
+background:rgb(230, 243, 233)
 }
