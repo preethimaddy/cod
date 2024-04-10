@@ -3,16 +3,21 @@ import {React,useState,useEffect,useRef} from 'react'
 const UseRefBasics = () => {
     const[value, setValue] = useState(0);
     const refContainer = useRef(null);
-    console.log(refContainer);
+    const isMounted = useRef(false);
+   // console.log(refContainer);
 
     useEffect(()=>{
-        console.log(refContainer);
-    });
+        if(!isMounted.current){
+            isMounted.current=true;
+            return
+        }
+        console.log('Re-render');
+    },[value]);
 
     const handleSubmit = (e) =>{
         e.preventDefault();
         const name = refContainer.current.value;
-        console.log(name)
+        console.log(name);
     }
   return (
   <>
