@@ -1,10 +1,11 @@
 import './App.css';
-import OtherInputs from './components/OtherInputs';
+import FormDataApi from './components/FormDataApi';
+
 function App() {
   return (
     <div className="App">
 
-<OtherInputs />
+<FormDataApi />
     </div>
   );
 }
