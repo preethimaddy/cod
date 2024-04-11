@@ -1,13 +1,17 @@
 import './App.css';
-import CustomHook from './components/CustomHook';
+import NavLinks from './starter/NavLinks';
 
-
+import Navbar from './starter/Navbar';
 
 function App() {
   return (
-    <div className="App">
-<CustomHook />
-    </div>
+  <>
+  <Navbar />
+<NavLinks />
+</>
+      
+
+   
   );
 }
 
