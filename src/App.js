@@ -1,12 +1,12 @@
 import './App.css';
+import CustomHook from './components/CustomHook';
 
-import UseRefBasics from './components/UseRefBasics';
+
 
 function App() {
   return (
     <div className="App">
-
-<UseRefBasics />
+<CustomHook />
     </div>
   );
 }
