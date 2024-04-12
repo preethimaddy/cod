@@ -1,6 +1,10 @@
-import React from 'react'
+import {useState} from 'react'
+import { NavbarContext } from './Navbar';
 
-const UserContainer = ({user, logout }) => {
+const UserContainer = () => {
+ const [user,logout] = useState(NavbarContext);
+ 
+
   return (
   <div className='user-container'>
    { user ? (
