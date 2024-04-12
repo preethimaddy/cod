@@ -1,13 +1,13 @@
 import './App.css';
-import NavLinks from './starter/NavLinks';
+import ReducerBasic from './reducer/ReducerBasic';
 
-import Navbar from './starter/Navbar';
+
+
 
 function App() {
   return (
   <>
-  <Navbar />
-<NavLinks />
+<ReducerBasic />
 </>
       
 
