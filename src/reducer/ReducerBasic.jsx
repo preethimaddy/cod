@@ -1,29 +1,41 @@
-import {React, useState} from 'react'
+import {React, useReducer} from 'react'
 import { data } from '../data'
 
+///// Default state////////
+const defaultState = {
+    people:data,
+};
+const reducer = () =>{
+
+}
+
+
 const ReducerBasic = () => {
-    const [people, setPeople] = useState(data)
+
+   const[state, dispatch] = useReducer(reducer, defaultState)
+    // const [people, setPeople] = useState(data)
 
     const removeItem =(id) =>{
-        let newPeople = people.filter((person) => person.id !== id);
-        setPeople(newPeople)
-        console.log(removeItem);
+        //Reducer Functionality
+        // let newPeople = people.filter((person) => person.id !== id);
+        // setPeople(newPeople)
+ 
     };
 
     const clearList = () =>{
-        setPeople([]);
-        console.log(clearList);
+        // setPeople([]);
+   
     }
 
 
     const resetList = () =>{
-        setPeople(data);
-        console.log(resetList)
+        // setPeople(data);
+    
     }
- 
+ console.log(state);
   return (
     <div>
-{people.map((person)=>{
+{state.people.map((person)=>{
     const {id, name} = person;
     return (
         <div key={id} className='item'>
@@ -32,7 +44,7 @@ const ReducerBasic = () => {
         </div>
     )
 })}
-{people.length <1 ? (<button className='btn' style={{marginTop:'2rem'}} onClick={resetList}>Reset</button>
+{state.people.length <1 ? (<button className='btn' style={{marginTop:'2rem'}} onClick={resetList}>Reset</button>
 ):(
 <button className='btn' style={{marginTop:'2rem'}} onClick={clearList}>Clear</button>) 
 }
