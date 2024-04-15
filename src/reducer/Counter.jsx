@@ -1,0 +1,13 @@
+import {React,useState} from 'react'
+
+const Counter = () => {
+    const[count, setCount] =useState(0)
+  return (
+    <button className='btn btn-primary' onClick={()=>setCount(count+1)}
+    style={{marginBottom:'1rem'}}>
+count {count}
+    </button>
+  )
+}
+
+export default Counter

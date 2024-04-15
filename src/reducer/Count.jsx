@@ -1,16 +1,14 @@
 import {useState} from 'react'
 import {data} from '../data'
 import List from './List'
+import Counter from './Counter'
 const Count = () => {
     const[people, setPeople] = useState(data)
-    const[count, setCount] =useState(0)
+  
   return (
     <>
     <section>
-        <button className='btn btn-primary' onClick={()=>setCount(count+1)}
-        style={{marginBottom:'1rem'}}>
-count {count}
-        </button>
+        <Counter />
         <List people={people}/>
     </section>
     
